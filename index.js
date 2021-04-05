@@ -248,8 +248,8 @@ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 function get20s(arr){
   let twentyArtists = []
     for(let i=0; i < arr.length; i++){
-      if(arr[i].years.includes('19', '20')){
-      twentyArtists.push(arr.name)
+      if(arr.years.includes('19'&&'20')){
+      twentyArtists.push(arr[i].name)
     }
     }
     return twentyArtists
@@ -309,14 +309,13 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-let stackedArtist = []
+// let stackedArtist = []
 
 function lotsOfArt(arr){
   for(let i=0; i < arr.length; i++){
     if(arr[i].paintings > 100){
-      stackedArtist.push(arr.name)
+      return arr[i].name
     }
-    return stackedArtist
   }
 }
 
